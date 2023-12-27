@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twoja Strona Turystyczna</title>
+    <title>Nazwa strony</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            overflow-x: hidden;
         }
 
         header {
@@ -19,11 +20,16 @@
             color: white;
             text-align: center;
             padding: 1em;
+            z-index: 1;
         }
 
         nav {
             background-color: #444;
             overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
         }
 
         nav a {
@@ -42,6 +48,18 @@
 
         section {
             padding: 20px;
+            margin-top: 60px; /* Dodane, aby uniknąć zasłaniania zawartości przez nagłówek i nawigację */
+        }
+
+        .parallax {
+            /* Dodane: Ustawienia dla efektu paralaksy */
+            background-image: url('back.jpg'); /* Zmień 'scenic-background.jpg' na ścieżkę do swojego obrazu */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 400px;
+            margin-top: 60px; /* Dodane, aby uniknąć zasłaniania zawartości przez nagłówek i nawigację */
         }
 
         footer {
@@ -52,6 +70,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 1;
         }
     </style>
 </head>
@@ -68,6 +87,8 @@
         <a href="#">Destynacje</a>
         <a href="#">Kontakt</a>
     </nav>
+
+    <div class="parallax"></div>
 
     <section>
         <h2>Witamy na stronie turystycznej!</h2>
